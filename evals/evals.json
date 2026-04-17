@@ -1,0 +1,29 @@
+{
+  "skill_name": "pitch-workflow",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "我们是一家数字营销公司，刚收到一个新能源汽车品牌的RFP，他们要找年度品牌代理商。客户是新势力品牌，今年销量增长放缓，想要通过品牌升级吸引更多家庭用户。预算大概2000万，下个月15号提案。帮我跑一个完整的比稿工作流。",
+      "expected_output": "应该触发完整比稿工作流（full mode），从Intake到Delivery全部执行。Intake应识别出'转型型'项目，Information应执行需求解构(De-briefing)识别真伪需求、做决策者深度画像、推演竞品策略找逻辑真空区，Strategy应执行第一性原理推导否定平庸切入点、构建逻辑链并自检跳跃点，Decision应计算胜率，Expression应生成8段式Pitch结构+情绪引擎评估+AIGC Demo提示词包+Q&A，Delivery应输出6个标准交付物（含AIGC Demo提示词包）。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "下周要去pitch一个咖啡连锁品牌的社交媒体代运营项目。客户是本土品牌，主打平价现磨，主要竞品是瑞幸和库迪。他们想提升社媒声量和年轻用户互动。预算不多，大概80万。帮我快速看看策略方向就行。",
+      "expected_output": "应该触发快速模式（preview mode），仅执行Intake→Information→Strategy。Intake应识别出'增长型'项目且预算有限，Information应分析咖啡连锁行业的社媒竞争格局+需求解构，Strategy应执行第一性原理推导找到与瑞幸/库迪的差异化解法+逻辑链自检。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "我们是一家创意热店，要去竞标一个国际运动品牌的年度创意Campaign。客户 Brief 写得很模糊，只说'want something fresh and bold'。评审团有CMO、品牌总监和一个外部咨询顾问。我知道还有两家4A在竞标。帮我从情报到Pitch Deck全搞。",
+      "expected_output": "应该触发完整模式。Information应重点做需求解构（Brief模糊本身就是信号）、竞标对手模拟（4A的典型策略）、找逻辑真空区，Decision应识别为'Aggressive型'决策模式（'fresh and bold'是信号），Expression应生成激进版开场Hook+情绪引擎优化+AIGC Demo视觉震撼提示词+Q&A，整体输出应强调与4A的差异化。",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "我们公司要去pitch一个银行的品牌焕新项目。客户的CMO去年刚从互联网公司跳过来，很重视数字化。评审团包括CMO、零售银行部总经理、还有采购部的人。帮我们做个完整的比稿分析，特别关注决策者画像和胜率。",
+      "expected_output": "应该触发完整模式。Information应重点做决策者深度画像——CMO从互联网跳来银行意味着决策风格可能偏Aggressive但受银行文化制约，采购部参与说明有Procurement成分。需求解构应识别银行品牌焕新的真痛点（可能不是品牌本身而是获客效率）。Decision应识别为混合型决策模式（Political+Safety+Procurement），胜率评估应有充分的证据链。Expression的情绪引擎应针对银行场景设计压迫感但不过激的表达。",
+      "files": []
+    }
+  ]
+}
