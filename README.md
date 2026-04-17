@@ -110,4 +110,4 @@ pitch-workflow/
 
 ## 安装
 
-将 `pitch-workflow.skill` 文件导入OpenClaw、Hermes Agent等即可使用。
+将 `pitch-skill.skill` 文件导入OpenClaw、Hermes Agent等即可使用。
