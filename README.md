@@ -94,7 +94,7 @@ pitch-workflow/
 │   └── bilingual-templates.md        # 中英文术语对照与英文输出模板
 ├── evals/
 │   └── evals.json                    # 功能测试用例
-└── pitch-workflow.skill              # 可安装的打包文件
+└── pitch-skill.skill              # 可安装的打包文件
 ```
 
 ## 触发场景
