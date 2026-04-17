@@ -204,95 +204,25 @@ CEO（隐形决策者）:
 - 调整"表达激进度"（根据决策模式调整）
 - 补充"stakeholder定制页"（针对关键影响者的定制内容）
 
-## 输出结构
+## 输出格式
 
-```json
-{
-  "decision_mode": {
-    "type": "Safety/Political/Aggressive/Procurement",
-    "evidence": ["判断依据"],
-    "strategy_posture": "推荐的策略姿态",
-    "posture_risk": "该姿态的潜在风险"
-  },
-  "power_graph": {
-    "core_decider": {"role": "", "stance": "", "strategy": ""},
-    "key_influencers": [
-      {"role": "", "stance": "", "strategy": ""}
-    ],
-    "veto_holders": [
-      {"role": "", "concern": "", "safety_measures": ""}
-    ],
-    "hidden_decider": {"role": "", "leverage_point": ""},
-    "influence_relations": [
-      {"from": "角色A", "to": "角色B", "type": "影响/否决"}
-    ]
-  },
-  "win_probability": {
-    "rate": 0.0,
-    "evidence_quality": "高/中/低",
-    "score_breakdown": {
-      "strategy_fit": {"score": 0, "evidence": "", "evidence_strength": "充分/有限/不足"},
-      "decision_maker_fit": {"score": 0, "evidence": "", "evidence_strength": "充分/有限/不足"},
-      "competitor_differentiation": {"score": 0, "evidence": "", "evidence_strength": "充分/有限/不足"},
-      "execution_credibility": {"score": 0, "evidence": "", "evidence_strength": "充分/有限/不足"},
-      "relationship_price": {"score": 0, "evidence": "", "evidence_strength": "充分/有限/不足"}
-    },
-    "risks": [
-      {"risk": "风险描述", "impact": "high/medium/low", "mitigation": "缓解措施"}
-    ],
-    "optimization": [
-      {"action": "优化动作", "expected_win_rate_lift": "+X%", "priority": "high/medium/low"}
-    ]
-  },
-  "simulation": {
-    "meeting_scenario": {
-      "round1_individual": {
-        "participants": [
-          {
-            "role": "角色",
-            "reaction": "反应",
-            "concern": "关注点",
-            "stance": "正面/中立/负面",
-            "worry": "核心顾虑"
-          }
-        ],
-        "overall_prediction": "整体预判",
-        "key_moment": "模拟中的关键转折点"
-      },
-      "round2_interaction": {
-        "description": "基于第一轮结果的互动推演",
-        "stance_changes": [
-          {
-            "role": "角色",
-            "previous_stance": "第一轮立场",
-            "new_stance": "第二轮立场",
-            "trigger": "立场变化触发因素"
-          }
-        ],
-        "key_insight": "互动推演的关键发现"
-      }
-    },
-    "scoring_table_estimate": {
-      "dimensions": [
-        {"name": "维度名", "weight": 0.0, "source": "Brief明确/行业推断/假设"}
-      ],
-      "strategy_implication": "基于评分表的策略精力分配建议"
-    },
-    "auto_optimization": [
-      {
-        "suggestion": "优化建议",
-        "reason": "为什么这样做",
-        "priority": "high/medium/low"
-      }
-    ]
-  },
-  "decision_log": [
-    {
-      "decision": "决策点",
-      "rationale": "理由",
-      "alternatives_considered": ["备选"],
-      "confidence": "high/medium/low"
-    }
-  ]
-}
-```
+使用 Markdown 输出（非 JSON），按以下四个模块组织。
+
+**1. 决策模式**
+- 类型（Safety/Political/Aggressive/Procurement）+ 判断依据 + 推荐策略姿态 + 姿态风险
+
+**2. 权力图谱**
+- 核心决策者 / 关键影响者 / 否决者 / 隐形决策者（各含角色、立场、策略）
+- 影响力关系图（A → 影响/否决 → B）
+
+**3. 胜率评估**
+- WinRate 百分比 + 证据质量（高/中/低）
+- 五维评分（策略匹配/决策者匹配/竞品差异化/执行可信度/关系价格）：每维 X/10 + 证据 + 证据强度
+- 风险清单（描述 + 影响程度 + 缓解措施）
+- 优化建议（具体动作 + 预期胜率提升 + 优先级）
+
+**4. 决策模拟**
+- 第一轮：各角色独立反应（反应 / 关注点 / 立场 / 顾虑）
+- 第二轮：互动推演（立场变化 + 触发因素 + 关键发现）
+- 评分表推断（维度 + 权重 + 来源）
+- 自动优化建议

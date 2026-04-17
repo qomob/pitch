@@ -65,63 +65,24 @@ vibe: 像一个资深客户总监，拿到Brief后快速拆解、识别隐藏信
 
 输出《项目作战卡（Battle Card）》，这是整个比稿作战的指挥文件。
 
-## 输出结构
+## 输出格式
 
-```json
-{
-  "project": {
-    "name": "项目代号",
-    "client": {
-      "name": "客户名",
-      "industry": "行业",
-      "stage": "增长/转型/危机/守成"
-    },
-    "objective": {
-      "type": "增长型/品牌型/转型型/危机型/守成型",
-      "primary_goal": "一句话描述核心目标",
-      "kpi_hints": ["客户暗示的KPI方向"]
-    },
-    "constraints": {
-      "budget": "明确金额或'弹性'",
-      "timeline": {
-        "brief_received": "日期",
-        "deadline": "截稿日",
-        "pitch_date": "提案日",
-        "available_days": 可用工作日数
-      },
-      "channels": ["指定渠道"],
-      "special_requirements": ["特殊约束"]
-    },
-    "deliverables": ["交付物清单"],
-    "hidden_signals": [
-      {
-        "signal": "信号描述",
-        "evidence": "Brief中的依据",
-        "implication": "对策略的影响"
-      }
-    ],
-    "competition": {
-      "estimated_competitors": "预估数量",
-      "likely_types": ["可能对手类型"],
-      "our_advantage": "我方核心优势"
-    }
-  },
-  "battle_card": {
-    "one_line": "一句话作战方针",
-    "must_win_dimension": "必须赢的维度",
-    "avoid_dimension": "避免纠缠的维度",
-    "risk_level": "low/medium/high",
-    "recommended_approach": "进攻/防守/差异化"
-  },
-  "decision_log": [
-    {
-      "decision": "决策点",
-      "rationale": "理由",
-      "confidence": "high/medium/low"
-    }
-  ]
-}
-```
+输出《项目作战卡（Battle Card）》，使用 Markdown 格式，包含：
+
+**项目信息**
+- 项目代号 / 客户名 / 行业 / 品牌阶段（增长/转型/危机/守成）
+- 目标类型（增长型/品牌型/转型型/危机型/守成型）+ 一句话核心目标 + KPI方向
+- 约束：预算 / 时间线（截稿日+提案日+可用天数）/ 渠道 / 特殊要求
+- 交付物清单
+
+**隐性信号**
+- 每个信号：描述 + Brief依据 + 对策略的影响
+
+**竞争态势**
+- 预估竞品数量和类型 + 我方核心优势
+
+**作战方针**
+- 一句话方针 / 必须赢的维度 / 避免纠缠的维度 / 风险等级 / 推荐策略（进攻/防守/差异化）
 
 ## Brief 质量门控
 

@@ -52,7 +52,7 @@ vibe: 像一个资深策略总监，能从行业底层逻辑出发，看穿Brief
    独特洞察: {一句话表达甲方没想到的维度}
    ```
 
-策略框架参考见 [references/strategy-frameworks.md](file:///Users/jonki/.trae/skills/pitch-workflow/references/strategy-frameworks.md)
+策略框架参考见 [references/strategy-frameworks.md](file:///Users/jonki/.trae/skills/pitch-skill/references/strategy-frameworks.md)
 
 ### Phase 2: 问题重构（Reframing）
 
@@ -177,92 +177,25 @@ Challenge（挑战）
 - 预算分配的变化（如有）
 - 风险评估的变化
 
-## 输出结构
+## 输出格式
 
-```json
-{
-  "first_principles": {
-    "industry_consensus": "行业共识",
-    "consensus_assumptions": "共识假设前提",
-    "failing_signals": "失效信号",
-    "new_perspective": "新视角",
-    "data_support": "数据支撑",
-    "unique_insight": "独特洞察"
-  },
-  "reframing": {
-    "official_problem": "官方问题",
-    "surface_problem": "表层问题",
-    "essential_problem": "本质问题⭐"
-  },
-  "insights": [
-    {
-      "one_liner": "一句话洞察",
-      "consumer_truth": "消费者真相",
-      "brand_connection": "品牌连接点",
-      "strategy_derivation": "策略推导",
-      "competitor_barrier": "竞品壁垒"
-    }
-  ],
-  "logic_chain": {
-    "challenge": "挑战描述",
-    "insight": "核心洞察",
-    "strategic_idea": "策略核心主张",
-    "execution_framework": {
-      "phases": [
-        {
-          "name": "阶段名",
-          "duration": "时长",
-          "core_actions": ["核心动作"],
-          "milestones": ["里程碑"]
-        }
-      ]
-    },
-    "expected_impact": {
-      "roi_projection": "ROI预估",
-      "market_share_target": "市场份额目标",
-      "brand_metrics": "品牌指标预期变化"
-    }
-  },
-  "logic_chain_audit": {
-    "checkpoints": [
-      {
-        "transition": "Challenge → Insight",
-        "has_gap": false,
-        "gap_description": "",
-        "reinforcement": ""
-      }
-    ],
-    "overall_health": "A/B/C",
-    "gap_points": ["跳跃点列表"],
-    "reinforcement_suggestions": ["补强建议列表"]
-  },
-  "risk_hedging": {
-    "conservative": {
-      "core_idea": "保守版策略核心",
-      "key_adjustments": ["关键调整"],
-      "risk_profile": "风险画像",
-      "switch_trigger": "切换条件"
-    },
-    "balanced": {
-      "core_idea": "折中版策略核心",
-      "key_adjustments": ["关键调整"],
-      "risk_profile": "风险画像",
-      "switch_trigger": "切换条件"
-    },
-    "aggressive": {
-      "core_idea": "激进版策略核心",
-      "key_adjustments": ["关键调整"],
-      "risk_profile": "风险画像",
-      "switch_trigger": "切换条件"
-    }
-  },
-  "decision_log": [
-    {
-      "decision": "决策点",
-      "rationale": "理由",
-      "alternatives_considered": ["备选方案"],
-      "confidence": "high/medium/low"
-    }
-  ]
-}
-```
+使用 Markdown 输出（非 JSON），按以下六个模块组织。
+
+**1. 第一性原理推导**
+- 行业共识 → 共识假设 → 失效信号 → 新视角 → 数据支撑 → 独特洞察
+
+**2. 问题重构**
+- 官方问题 → 表层问题 → 本质问题⭐
+
+**3. 洞察**
+- 一句话洞察 + 消费者真相 + 品牌连接点 + 策略推导 + 竞品壁垒
+
+**4. 逻辑链**
+- Challenge → Insight → Strategic Idea → Execution Framework（分阶段）→ Expected Impact（ROI/市场份额/品牌指标）
+- 逻辑链自检报告：4个过渡点逐一检查（有跳跃/无跳跃 + 补强建议）+ 整体健康度 A/B/C
+
+**5. 风险对冲**
+- 保守版 / 折中版 / 激进版：各含策略核心、关键调整、风险画像、切换条件
+
+**6. 决策日志**
+- 关键决策点 + 理由 + 置信度

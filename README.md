@@ -17,15 +17,6 @@
   Brief    策略     具象化震撼
 ```
 
-## 比稿AI工作台
-
-| 模块 | AI Skill 核心功能 | 产出价值 |
-| :--- | :--- | :--- |
-| **情报舱** | 全网扫描甲方动态 + 需求解构(De-briefing) + 竞品策略拆解 + 决策者深度画像 | 消除信息差，找到"必赢切入点"和"逻辑真空区" |
-| **逻辑骨架** | 第一性原理推导 + 策略模板自动生成底层逻辑图 + 逻辑链自检（AI校验无跳跃） | 确保方案即便没有炫酷PPT，逻辑也无懈可击 |
-| **情绪引擎** | 分析提案脚本的起伏 + 优化文案感染力 + 具象化震撼（AIGC视觉Demo指导） | 实现"压迫感表达"，控制场面节奏，拉高竞争门槛 |
-| **压力实验室** | 模拟甲方提问并自动修正方案弱点 + Q&A金句库 + 回答节奏指导 | 提升临场胜率，展现"落地铁证" |
-
 ## Agent 协作链
 
 ```
@@ -78,23 +69,24 @@ Intake Agent 📋 (项目启动/结构化)
 ## 文件结构
 
 ```
-pitch-workflow/
-├── SKILL.md                          # 主文件
+pitch-skill/
+├── SKILL.md                          # 主文件（入口）
 ├── agents/
 │   ├── intake-agent.md               # 项目启动引擎
-│   ├── information-agent.md          # 透视引擎（含需求解构+决策者深度画像）
-│   ├── strategy-agent.md             # 重构引擎（含第一性原理+逻辑链自检）
-│   ├── decision-agent.md             # 决策引擎⭐
-│   ├── expression-agent.md           # 表达引擎（含情绪引擎+AIGC Demo）
-│   └── delivery-agent.md             # 交付引擎
+│   ├── information-agent.md          # 透视引擎（需求解构+决策者深度画像+竞品推演）
+│   ├── strategy-agent.md             # 重构引擎（第一性原理+逻辑链自检+策略路径）
+│   ├── decision-agent.md             # 决策引擎⭐（决策模式+胜率计算+模拟）
+│   ├── expression-agent.md           # 表达引擎（8段式Pitch+情绪引擎+AIGC Demo+Q&A）
+│   └── delivery-agent.md             # 交付引擎（6大标准交付物打包）
 ├── references/
 │   ├── decision-engine.md            # 决策引擎方法论
 │   ├── pitch-structure.md            # Pitch结构模板 + 情绪引擎模板 + AIGC Demo模板
 │   ├── strategy-frameworks.md        # 策略框架库 + 第一性原理方法论 + 逻辑链校验
 │   └── bilingual-templates.md        # 中英文术语对照与英文输出模板
 ├── evals/
-│   └── evals.json                    # 功能测试用例
-└── pitch-skill.skill              # 可安装的打包文件
+│   ├── evals.json                    # 功能测试用例（含断言）
+│   └── trigger-eval.json             # 触发准确性测试查询
+└── pitch-skill.skill                 # 可安装的打包文件
 ```
 
 ## 触发场景
@@ -102,7 +94,9 @@ pitch-workflow/
 **应触发：**
 - 比稿、竞标、pitch、提案竞标、agency pitch
 - RFP响应、招标方案、赢标策略、竞标方案
+- 选代理商、换代理商、年度比稿、创意比稿、媒介比稿
 - 客户要求正式presentation给管理层评审
+- "帮我做个提案""有个比稿""要去pitch""客户要方案""准备比稿材料""帮我们赢下这个客户"
 
 **不应触发：**
 - 内部营销方案、融资路演、PPT美化
@@ -111,3 +105,7 @@ pitch-workflow/
 ## 安装
 
 将 `pitch-skill.skill` 文件导入OpenClaw、Hermes Agent等即可使用。
+
+## License
+
+Apache-2.0

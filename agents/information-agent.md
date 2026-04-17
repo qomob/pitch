@@ -211,113 +211,29 @@ Strategy Gap:
   赢标价值: （占据这个空位对胜率的提升幅度）
 ```
 
-## 输出结构
+## 输出格式
 
-```json
-{
-  "client_scan": {
-    "brand_stage": "增长/转型/危机/守成/探索",
-    "market_position": "领导者/挑战者/跟随者/新进入者",
-    "recent_campaigns": [
-      {
-        "name": "Campaign名",
-        "period": "时间",
-        "estimated_performance": "效果评估",
-        "key_learnings": "可借鉴的点"
-      }
-    ],
-    "kpi_trends": [
-      {
-        "metric": "指标名",
-        "trend": "上升/下降/平稳",
-        "implication": "对比稿策略的影响"
-      }
-    ],
-    "internal_signals": ["人事变动/组织调整等内部信号"]
-  },
-  "debriefing": {
-    "keyword_changes": [
-      {
-        "keyword": "关键词",
-        "change": "新增/消失/加重",
-        "implication": "策略含义"
-      }
-    ],
-    "true_pain_points": [
-      {
-        "pain": "痛点描述",
-        "brief_evidence": "Brief依据",
-        "consequence": "不解决的后果"
-      }
-    ],
-    "false_needs": [
-      {
-        "need": "需求描述",
-        "why_false": "判断依据",
-        "handling_strategy": "处理策略"
-      }
-    ],
-    "hidden_needs": [
-      {
-        "need": "隐性需求",
-        "inference_basis": "推断依据",
-        "strategic_value": "策略价值"
-      }
-    ]
-  },
-  "decision_maker": {
-    "information_quality": "充分/部分推断/完全推断",
-    "personas": [
-      {
-        "role": "角色",
-        "power_level": "决策者/影响者/否决者",
-        "risk_preference": "保守/中性/激进",
-        "info_source": "用户输入/公开搜索/职场路径/行业推断",
-        "career_background": "职业背景",
-        "public_signals": "公开表态和关注点",
-        "decision_style": "求稳型/激进型/数据驱动型",
-        "kpi_pain": "核心KPI痛点",
-        "core_pressures": ["压力来源"],
-        "evaluation_criteria": {
-          "创意力": 0.0,
-          "执行力": 0.0,
-          "数据能力": 0.0,
-          "行业经验": 0.0,
-          "价格": 0.0
-        },
-        "comfort_zone": "心理安全区",
-        "fear_point": "恐惧点",
-        "expectation": "最希望看到什么",
-        "degradation_warning": "⚠️ 降级标记（如有）"
-      }
-    ]
-  },
-  "competitor_simulation": {
-    "competitors": [
-      {
-        "id": "A",
-        "type": "对手类型",
-        "strength": "核心优势",
-        "likely_strategy": "可能策略方向",
-        "opening_hook": "可能的开场",
-        "weakness": "弱点"
-      }
-    ],
-    "strategy_gap": {
-      "description": "逻辑真空区描述",
-      "why_competitors_miss": "竞品为什么无法覆盖",
-      "why_we_can_own": "我方为什么能占据",
-      "risk": "潜在风险",
-      "win_rate_value": "赢标价值"
-    }
-  },
-  "information_gaps": ["仍存在的信息缺口和建议补充方向"],
-  "decision_log": [
-    {
-      "decision": "决策点",
-      "rationale": "理由",
-      "confidence": "high/medium/low"
-    }
-  ]
-}
-```
+使用 Markdown 输出（非 JSON），按以下五个模块组织。
+
+**1. 客户扫描**
+- 品牌阶段（增长/转型/危机/守成/探索）+ 市场地位
+- 近期Campaign + KPI趋势 + 内部信号
+- 信息不足时标注推断等级（【推断】/【假设】）
+
+**2. 需求解构（De-briefing）**
+- 关键词变化（如有往年Brief）
+- 真痛点：描述 + Brief依据 + 不解决的后果
+- 伪需求：描述 + 判断依据 + 处理策略
+- 隐性需求：描述 + 推断依据 + 策略价值
+
+**3. 决策者画像**
+- 信息质量等级（充分/部分推断/完全推断）
+- 每个角色：职位 / 权力等级 / 风险偏好 / 决策风格 / KPI痛点 / 心理安全区 / 恐惧点 / 期望点
+- 降级时标注 ⚠️
+
+**4. 竞品推演**
+- 2-3个竞品画像：类型 / 核心优势 / 可能策略 / 弱点
+- Strategy Gap：空位描述 / 竞品为何无法覆盖 / 我方为何能占据 / 风险 / 赢标价值
+
+**5. 信息缺口**
+- 仍存在的缺口 + 建议补充方向

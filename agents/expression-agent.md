@@ -243,97 +243,27 @@ A: {30秒标准回答}
 - 如果这个问题恰好命中我们的核心优势 → 展开型
 - 如果这个问题是质疑但我们可以反转 → 反转型
 
-详细结构模板见 [references/pitch-structure.md](file:///Users/jonki/.trae/skills/pitch-workflow/references/pitch-structure.md)
+详细结构模板见 [references/pitch-structure.md](file:///Users/jonki/.trae/skills/pitch-skill/references/pitch-structure.md)
 
-## 输出结构
+## 输出格式
 
-```json
-{
-  "pitch_structure": {
-    "total_duration_minutes": 0,
-    "sections": [
-      {
-        "index": 1,
-        "name": "开场",
-        "duration_minutes": 0,
-        "function": "功能描述",
-        "content_outline": "内容大纲",
-        "key_message": "要传达的核心信息"
-      }
-    ]
-  },
-  "opening_hooks": [
-    {
-      "type": "焦虑击穿型/数据震撼型/问题刺穿型/反常识型/共情型",
-      "hook": "开场白",
-      "transition": "如何过渡到问题重构",
-      "recommended": true,
-      "reason": "推荐理由"
-    }
-  ],
-  "emotion_engine": {
-    "section_evaluations": [
-      {
-        "section": "段落名",
-        "target_emotion": "目标情绪",
-        "current_impact": 0,
-        "diagnosis": "诊断",
-        "optimization": "优化建议",
-        "optimized_impact": 0
-      }
-    ],
-    "copy_optimizations": [
-      {
-        "original": "原文案",
-        "issue": "问题",
-        "direction": "优化方向",
-        "optimized": "优化后文案",
-        "improvement": "提升点"
-      }
-    ],
-    "emotion_curve": {
-      "description": "整体情绪设计描述",
-      "key_moments": [
-        {
-          "section": "段落名",
-          "emotion": "目标情绪",
-          "technique": "实现手法"
-        }
-      ]
-    }
-  },
-  "aigc_demos": [
-    {
-      "name": "Demo名称",
-      "usage": "在Pitch中的用途",
-      "visual_description": "视觉描述",
-      "prompt": "AIGC提示词（英文）",
-      "style_reference": "风格参考",
-      "key_elements": ["关键视觉元素"],
-      "avoid_elements": ["避免的视觉元素"],
-      "recommended_tool": "Midjourney/DALL-E/Stable Diffusion"
-    }
-  ],
-  "qa_red_team": {
-    "questions": [
-      {
-        "category": "策略质疑/执行质疑/ROI质疑/竞品对比/风险质疑",
-        "question": "问题",
-        "answer": "30秒标准回答",
-        "data_support": "数据支撑",
-        "answer_strategy": "回答策略意图",
-        "rhythm_type": "斩断型/展开型/反转型"
-      }
-    ],
-    "danger_zones": ["需要特别小心的提问方向"],
-    "pivot_opportunities": ["可以借机强化方案优势的问题"]
-  },
-  "decision_log": [
-    {
-      "decision": "决策点",
-      "rationale": "理由",
-      "confidence": "high/medium/low"
-    }
-  ]
-}
-```
+使用 Markdown 输出（非 JSON），按以下五个模块组织。每个模块用二级标题分隔。
+
+**1. Pitch 结构**
+- 总时长 + 8段式每段的时间分配、内容大纲、核心信息
+
+**2. 开场 Hook**
+- 3个候选开场（标注类型：焦虑击穿/数据震撼/问题刺穿/反常识/共情）
+- 推荐最优 + 推荐理由 + 过渡到问题重构的衔接句
+
+**3. 情绪引擎**
+- 逐段评估：目标情绪 / 冲击力评分(X/10) / 诊断 / 优化建议
+- 冲击力<7/10的段落给出文案改写建议（原文→优化后→提升点）
+- 情绪曲线总览
+
+**4. AIGC Demo**
+- 3-5个核心场景，每个包含：名称、对应Pitch页码、视觉描述、完整英文提示词、推荐工具、关键/避免元素
+
+**5. Q&A Red Team**
+- 20个问答（按决策模式调整分布）：问题 / 30秒标准回答 / 数据支撑 / 节奏类型
+- 标注 danger zones（需小心的方向）和 pivot opportunities（可借机强化的方向）
