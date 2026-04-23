@@ -110,7 +110,7 @@ pitch-skill/
 
 Apache-2.0
 
-##加入群聊
+## 加入群聊
 
 <div align="center">
   <img src="https://qomob.ai/xskill.jpg" width="500" alt="XSkill">
