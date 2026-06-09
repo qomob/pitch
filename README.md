@@ -106,6 +106,13 @@ pitch-skill/
 
 将 `pitch-skill.skill` 文件导入OpenClaw、Hermes Agent等即可使用。
 
+
+## 加入群聊
+
+<div align="center">
+  <img src="https://qomob.ai/xskill.jpg" width="600" alt="XSkill">
+</div>
+
 ## License
 
 Apache-2.0
