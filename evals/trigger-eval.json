@@ -78,5 +78,50 @@
   {
     "query": "客户对我们的执行效果不太满意，我需要准备一份复盘报告，分析过去三个月的投放数据和优化建议，然后约个会议跟他们沟通。",
     "should_trigger": false
+  },
+  {
+    "query": "pitch",
+    "should_trigger": true,
+    "note": "极短查询 — 单词触发"
+  },
+  {
+    "query": "比稿",
+    "should_trigger": true,
+    "note": "极短查询 — 单词触发"
+  },
+  {
+    "query": "help me win this pitch next week",
+    "should_trigger": true,
+    "note": "英文短查询"
+  },
+  {
+    "query": "内部pitch给老板看明年的营销规划，不是对外竞标",
+    "should_trigger": false,
+    "note": "混合信号 — 内部汇报不应触发"
+  },
+  {
+    "query": "我要在招标网上投一个政府项目，需要写投标文件，包括技术方案和商务报价",
+    "should_trigger": true,
+    "note": "政府采购招标 — 应触发"
+  },
+  {
+    "query": "帮我们准备下个季度的media plan，给内部团队用的，不是比稿",
+    "should_trigger": false,
+    "note": "明确排除比稿场景"
+  },
+  {
+    "query": "We need to prepare for a competitive agency review for a luxury fashion brand. Three agencies are shortlisted and we need to win this.",
+    "should_trigger": true,
+    "note": "全英文比稿场景"
+  },
+  {
+    "query": "我朋友开了家奶茶店，想取个名字，帮我想几个",
+    "should_trigger": false,
+    "note": "完全无关 — 命名需求"
+  },
+  {
+    "query": "公司要换广告代理商，我是甲方，想设计一个比稿流程来筛选agency，帮我出个评分标准",
+    "should_trigger": true,
+    "note": "甲方视角 — 设计比稿流程也应触发（需要决策引擎知识）"
   }
 ]

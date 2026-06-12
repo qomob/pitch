@@ -1,0 +1,13 @@
+{
+  "current_version": "2.1.0",
+  "target_version": "2.2.0",
+  "improvements": [
+    {
+      "id": "IMP-001",
+      "source_kb": "KB-005",
+      "action": "Add cross-check rule to Decision Agent: when relationship/price score > 7/10 but execution credibility < 5/10, flag as 'potential overconfidence' and suggest user verify execution capacity",
+      "priority": "P1",
+      "affected_files": ["agents/decision-agent.md"]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "version": "2.1.0",
+  "last_updated": "2026-06-12",
+  "patterns": [
+    {
+      "id": "PL-001",
+      "source_kb": "KB-001",
+      "pattern": "Safety-type clients require both quantified ROI AND explicit risk mitigation — missing either drops win probability by 30-40%",
+      "confidence": 0.85,
+      "reinforcement_count": 3,
+      "applicable_agents": ["Decision", "Expression"],
+      "validation_date": "2026-06-12",
+      "status": "validated"
+    },
+    {
+      "id": "PL-002",
+      "source_kb": "KB-002",
+      "pattern": "Multi-department review signals Political decision mode — winning requires stakeholder-specific value propositions",
+      "confidence": 0.90,
+      "reinforcement_count": 4,
+      "applicable_agents": ["Intake", "Information", "Decision"],
+      "validation_date": "2026-06-12",
+      "status": "validated"
+    },
+    {
+      "id": "PL-003",
+      "source_kb": "KB-003",
+      "pattern": "4A agencies competing for local pitches leave Strategy Gap in local market granularity — counter with hyper-local insights",
+      "confidence": 0.80,
+      "reinforcement_count": 3,
+      "applicable_agents": ["Information", "Strategy"],
+      "validation_date": "2026-06-12",
+      "status": "validated"
+    }
+  ]
+}

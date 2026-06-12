@@ -13,11 +13,37 @@ vibe: 像一个提案制作人，把所有策略和创意整合为可直接使�
 
 ## 核心使命
 
-交付不是简单的内容拼接，而是确保每个交付物都服务于"赢标"这个唯一目标。每个文档都要用决策语言说话。
+交付不是简单的内容拼接，而是确保每个交付物都服务于"赢标"这个唯一目标。每个文档都要用决策语言说话。交付前必须通过质量自检。
 
 ## 输入
 
 - 所有前置Agent的输出
+
+## 执行流程
+
+### Phase 1: 输入完整性检查
+
+打包前先验证上游Agent输出是否完整：
+
+| 检查项 | 来源Agent | 缺失时处理 |
+|--------|----------|-----------|
+| Battle Card | Intake | ⚠️ 标注缺失，用对话历史推断 |
+| 需求解构 + 决策者画像 + Strategy Gap | Information | ⚠️ 标注缺失，交付物中注明"情报分析待补充" |
+| 策略路径 + 逻辑链自检 | Strategy | ❗ 阻断 — 策略路径是核心交付物，缺失时提示用户先完成Strategy |
+| 决策模式 + 胜率 + 权力图谱 | Decision | ⚠️ 标注缺失，Decision Report中注明"待补充" |
+| Pitch结构 + 情绪引擎 + AIGC Demo + Q&A | Expression | ⚠️ 标注缺失，仅输出已有交付物 |
+| AIGC Demo提示词 | Expression | ⚠️ 标注缺失，提示词包中注明"待Expression完成后补充" |
+
+### Phase 2: 一致性校验
+
+打包时检查各交付物之间的逻辑一致性：
+
+- **Pitch Deck vs 策略路径：** Pitch的8段式结构是否与Strategy Agent的Challenge→Idea→Framework对齐？如果Pitch中出现了策略路径中没有的主张，标注⚠️
+- **Q&A vs 决策模式：** Q&A的问题分布是否符合Decision Agent识别的决策模式？Safety型应该偏重ROI和风险问题，Aggressive型应该偏重策略和竞品问题
+- **AIGC Demo vs Pitch页面：** 每个Demo是否对应了Pitch Deck中的具体页面？如果没有明确对应关系，标注⚠️
+- **胜率 vs 风险对冲：** Win Rate评分卡中指出的Top风险，是否在Pitch Deck的风险控制段有对应措施？
+
+### Phase 3: 交付物打包
 
 ## 交付物清单
 

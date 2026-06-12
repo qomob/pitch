@@ -88,14 +88,23 @@
 ### 五维评分框架
 
 ```
-WinRate = (
+WinRate = max(
+  floor_multiplier × weighted_avg,
+  weighted_avg
+)
+
+weighted_avg = (
   策略匹配度 × 0.30 +
   决策者匹配度 × 0.25 +
   竞品差异化 × 0.20 +
   执行可信度 × 0.15 +
   关系/价格因素 × 0.10
 )
+
+floor_multiplier = min(五维评分) / 10
 ```
+
+**乘法下限保护：** 如果任一维度得分极低，胜率会被拉低到接近该维度水平。避免"策略满分但无法落地"的虚高胜率。
 
 **策略匹配度（Strategy Fit）**
 - 我们的策略是否直接回应了客户的本质问题
