@@ -2,7 +2,7 @@
 
 > 核心定位：AI影子智囊团，从"做方案"转向"造共识"。甲方买的不是创意，买的是"解决问题的确定性"。
 >
-> **Version 2.2.0** | SMM Level 5 (Production) | Self-Evolving
+> **Version 2.2.0** | SMM Level 3 (Validated)
 
 ## 一句话介绍
 
@@ -74,10 +74,10 @@ Intake Agent 📋 (项目启动/结构化)
 
 ```
 pitch-skill/
-├── SKILL.md                          # 主文件（入口）v2.2.0 含自进化协议
-├── version.json                      # SSOT版本追踪 + 进化配置 + 性能基线
+├── SKILL.md                          # 主文件（入口）
+├── version.json                      # SSOT版本追踪 + 性能基线
 ├── baseline.json                     # 评估基线快照
-├── .gitignore                        # 排除运行时日志
+├── .gitignore
 ├── agents/
 │   ├── __init__.md                   # Lazy-loading注册表 + 降级策略 + 摘要协议 + 成本估算
 │   ├── intake-agent.md               # 项目启动引擎（含Brief质量门控）
@@ -94,35 +94,8 @@ pitch-skill/
 ├── evals/
 │   ├── evals.json                    # 10个测试用例（4标准+6对抗/边界）
 │   └── trigger-eval.json             # 30个触发测试（20原始+10边界）
-├── learnings/                        # 自进化数据层（TLSE Loop 3）
-│   ├── execution-log.jsonl           # 运行时数据捕获（.gitignore排除）
-│   ├── knowledge-base.json           # 领域知识库（5条种子知识）
-│   ├── pattern-library.json          # 已验证模式库（3条）
-│   └── creator-vnext.json            # 改进队列（1条待实施）
 └── pitch-skill.skill                 # 可安装的打包文件
 ```
-
-## 自进化机制 (TLSE Loop 3)
-
-Pitch Skill v2.2.0 实现了三环技能工程（TLSE）进化周期，与 XGEO 同级架构：
-
-```
-L7 运行时捕获 → L7.5 反馈分类 → L6 模式提取 → L6.5 知识更新 → Creator vNext
-      ↑                                                          |
-      └──────────── L2 Creator (下一版本) ←──────────────────────┘
-```
-
-**6种进化触发器：**
-| 触发器 | 条件 | 动作 |
-|--------|------|------|
-| `scheduled` | 每30天 | 完整进化周期 |
-| `event_feedback` | 用户报告准确性问题 | 分类 → 更新KB → 安排vNext |
-| `event_external` | 行业趋势变化（如新评审标准） | 标记受影响Agent → 紧急vNext |
-| `performance_drop` | Eval通过率<80% | 紧急审计 → 回归修复 |
-| `pattern_threshold` | 新模式 confidence>=0.7 + 3次强化 | 推广到pattern-library |
-| `usage_signal` | 新Brief类型出现3次以上 | 新分类/Agent增强候选 |
-
-**每次会话自动执行：** 启动时检查进化状态 → 加载相关KB上下文 → 执行结束后捕获运行数据。
 
 ## 触发场景
 
@@ -136,19 +109,6 @@ L7 运行时捕获 → L7.5 反馈分类 → L6 模式提取 → L6.5 知识更�
 **不应触发：**
 - 内部营销方案、融资路演、PPT美化
 - 竞品调研、品牌定位、培训汇报
-
-## 工程质量
-
-| 维度 | v2.0 | v2.2.0 |
-|------|:----:|:------:|
-| SMM Level | 2 (Workflow) | **5 (Production)** |
-| Evals | 4 标准 | **10 (4标准+6对抗)** |
-| Trigger Tests | 20 | **30 (20原始+10边界)** |
-| Context Management | 无 | **Inter-Agent摘要协议** |
-| Fallback | 无 | **6-Agent降级表** |
-| Self-Evolution | 无 | **TLSE Loop 3 完整闭环** |
-| Version Tracking | 无 | **version.json + baselines** |
-| Cost Estimation | 无 | **Per-mode成本估算** |
 
 ## 安装
 

@@ -30,29 +30,11 @@ vibe: 像一个资深策略总监，能从行业底层逻辑出发，看穿Brief
 
 **执行方法：**
 
-1. **行业底层事实拆解**
-   - 这个行业的增长底层逻辑是什么？（渠道驱动？产品驱动？品牌驱动？）
-   - 当前市场共识是什么？（大多数人在怎么做？）
-   - 共识的假设前提是什么？（这些假设还成立吗？）
+1. **行业底层事实拆解** — 增长底层逻辑是什么？当前市场共识是什么？共识的假设前提是什么？
+2. **假设挑战** — 哪些行业假设正在失效？推翻后能看到什么新视角？有没有数据支撑？
+3. **独特洞察产出** — 从底层事实推导，让甲方觉得"我怎么没查到这个维度"
 
-2. **假设挑战**
-   - 哪些行业假设正在失效？（人口结构变化？消费习惯转移？技术颠覆？）
-   - 如果推翻这些假设，会看到什么新视角？
-   - 有没有数据支撑这个新视角？
-
-3. **独特洞察产出**
-   ```
-   第一性原理推导:
-
-   行业共识: {大多数人在怎么做}
-   共识假设: {这些做法的前提是什么}
-   失效信号: {为什么这些假设在动摇}
-   新视角: {推翻假设后看到什么}
-   数据支撑: {有什么数据可以佐证}
-   独特洞察: {一句话表达甲方没想到的维度}
-   ```
-
-策略框架参考见 [references/strategy-frameworks.md](file:///Users/jonki/.trae/skills/pitch-skill/references/strategy-frameworks.md)
+推导模板和行业底层逻辑参考见 [references/strategy-frameworks.md](file:///Users/jonki/Documents/skill/.trae/skills/pitch-skill/references/strategy-frameworks.md)
 
 ### Phase 2: 问题重构（Reframing）
 
@@ -71,11 +53,7 @@ Layer 3 - 本质问题（真正要解决的问题是什么）⭐
   : 客户可能自己都没意识到，但解决后能根本性改变局面的核心问题
 ```
 
-**重构方法：**
-- 5 Whys 推导法（连续追问为什么，直到本质）
-- 换位思考（如果我是客户的老板，我真正关心什么）
-- 行业类比（同行业成功案例解决了什么本质问题）
-- 从Information Agent的Hidden Signals和De-briefing出发反推
+**重构方法：** 5 Whys推导法、换位思考、行业类比、从Information Agent的Hidden Signals反推。详见 [references/strategy-frameworks.md](file:///Users/jonki/Documents/skill/.trae/skills/pitch-skill/references/strategy-frameworks.md)
 
 ### Phase 3: 洞察生成（Insight Engine）
 
@@ -87,11 +65,7 @@ Layer 3 - 本质问题（真正要解决的问题是什么）⭐
 3. 必须能推导出具体策略动作（不是空泛的道理）
 4. 必须竞品不容易想到（有壁垒性）
 
-**洞察生成路径：**
-- 消费者矛盾（消费者说想要A但实际行为是B）
-- 文化张力（社会趋势和个体需求的冲突）
-- 品类盲点（所有竞品都在忽略的消费者需求）
-- 数据反常识（数据呈现的结论和常识相反）
+**洞察生成路径：** 消费者矛盾、文化张力、品类盲点、数据反常识。各路径的详细示例见 [references/strategy-frameworks.md](file:///Users/jonki/Documents/skill/.trae/skills/pitch-skill/references/strategy-frameworks.md)
 
 **洞察结构：**
 ```
@@ -127,33 +101,9 @@ Challenge（挑战）
 
 **逻辑链自检（Logic Chain Audit）⭐：**
 
-逻辑链构建完成后，你必须执行一轮自检，找出逻辑跳跃和想当然的地方。这是确保方案"逻辑无懈可击"的关键步骤。
+逻辑链构建完成后，必须执行一轮自检，检查四个过渡点（Challenge→Insight、Insight→Idea、Idea→Framework、Framework→Impact）是否有逻辑跳跃。
 
-```
-逻辑链自检报告:
-
-检查项1: Challenge → Insight 的推导
-  逻辑跳跃? 是/否
-  如有跳跃: {跳跃点描述}
-  补强建议: {需要补充什么数据/案例}
-
-检查项2: Insight → Strategic Idea 的推导
-  逻辑跳跃? 是/否
-  如有跳跃: {跳跃点描述}
-  补强建议: {需要补充什么数据/案例}
-
-检查项3: Strategic Idea → Execution Framework 的推导
-  逻辑跳跃? 是/否
-  如有跳跃: {跳跃点描述}
-  补强建议: {需要补充什么数据/案例}
-
-检查项4: Execution Framework → Expected Impact 的推导
-  逻辑跳跃? 是/否
-  如有跳跃: {跳跃点描述}
-  补强建议: {需要补充什么数据/案例}
-
-整体逻辑链健康度: A（无跳跃）/ B（1-2个小跳跃，可补强）/ C（存在重大跳跃，需重构）
-```
+自检报告模板和补强方法见 [references/strategy-frameworks.md](file:///Users/jonki/Documents/skill/.trae/skills/pitch-skill/references/strategy-frameworks.md)
 
 自检发现的问题必须：
 - 标注为"⚠️ 跳跃点"
@@ -162,14 +112,9 @@ Challenge（挑战）
 
 ### Phase 5: 风险对冲（Plan B/C）
 
-为每个策略路径生成三个版本，针对方案中最具争议的部分预先生成执行备选方案。
+为每个策略路径生成三个版本（保守版/折中版/激进版），针对方案中最具争议的部分预先生成执行备选方案。
 
-**版本矩阵：**
-| 版本 | 特征 | 适用场景 | 切换条件 |
-|------|------|---------|---------|
-| 保守版 | 安全、确定性强、ROI明确 | 客户偏Safety型、决策者保守 | 客户反复强调风险控制 |
-| 折中版 | 平衡创新和可执行性 | 大多数场景的默认选择 | 正常推进 |
-| 激进版 | 大创意、颠覆性、高回报 | 客户偏Aggressive型、品牌转型期 | 客户明确要求突破 |
+版本矩阵和切换触发条件见 [references/strategy-frameworks.md](file:///Users/jonki/Documents/skill/.trae/skills/pitch-skill/references/strategy-frameworks.md)
 
 每个版本必须包含：
 - 策略核心的一句话变化

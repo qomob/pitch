@@ -2,8 +2,8 @@
   "skill_name": "pitch-skill",
   "version": "2.2.0",
   "created": "2025-01-01",
-  "updated": "2026-06-12",
-  "smm_level": 5,
+  "updated": "2026-06-14",
+  "smm_level": 3,
   "smm_target": 5,
   "agents": [
     {"name": "intake", "file": "agents/intake-agent.md", "version": "2.2.0"},
@@ -20,44 +20,30 @@
     {"name": "bilingual-templates", "file": "references/bilingual-templates.md", "conditional": true}
   ],
   "registry": "agents/__init__.md",
-  "evolution": {
-    "enabled": true,
-    "learnings_dir": "learnings/",
-    "last_evolution_cycle": "2026-06-12",
-    "evolution_schedule_days": 30
-  },
   "baselines": {
     "2.1.0": {
       "date": "2026-06-12",
       "evals_total": 10,
       "trigger_evals_total": 30,
-      "eval_pass_rate": null,
-      "trigger_pass_rate": null,
       "note": "Baseline established at v2.1.0 — metrics to be populated after first eval run"
     },
     "2.2.0": {
       "date": "2026-06-12",
       "evals_total": 10,
       "trigger_evals_total": 30,
-      "eval_pass_rate": null,
-      "trigger_pass_rate": null,
-      "kb_entries_seeded": 5,
-      "pattern_library_entries": 3,
-      "vnext_improvements": 1,
-      "note": "Self-evolution infrastructure added. KB seeded with 5 domain entries. Awaiting first production run data."
+      "note": "Self-evolution infrastructure removed (v2.2.0 was over-optimized). Core pipeline unchanged."
     }
   },
   "changelog": [
     {
       "version": "2.2.0",
-      "date": "2026-06-12",
+      "date": "2026-06-14",
       "changes": [
-        "P0: Added Self-Evolution Protocol (TLSE Loop 3) to SKILL.md — L7 Runtime Data Capture, L7.5 Feedback Classification, L6 Pattern Extraction, L6.5 Knowledge Update & Creator vNext, L3.5 Regression Baseline",
-        "P0: Created learnings/ directory with knowledge-base.json, pattern-library.json, creator-vnext.json, execution-log.jsonl",
-        "P1: Added evolution config to version.json (smm_level, smm_target, evolution schedule, baselines)",
-        "P1: Added Evolution Triggers (scheduled, event_feedback, event_external, performance_drop, pattern_threshold, usage_signal)",
-        "P1: Added Evolution Pre-Check on session start (bootstrap + trigger evaluation)",
-        "P2: Added .gitignore for execution-log.jsonl"
+        "Removed Self-Evolution Protocol (TLSE Loop 3) from SKILL.md — over-optimized for conversational AI context",
+        "Removed learnings/knowledge-base.json, pattern-library.json, creator-vnext.json — redundant copies of domain knowledge already encoded in agent files",
+        "Removed evolution config from version.json",
+        "Corrected SMM level from 5 to 3 (no production validation data exists)",
+        "Kept regression baseline section (L3.5) as lightweight version-upgrade gate"
       ]
     },
     {
