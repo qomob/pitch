@@ -1,8 +1,8 @@
 {
   "skill_name": "pitch-skill",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "created": "2025-01-01",
-  "updated": "2026-06-14",
+  "updated": "2026-07-09",
   "smm_level": 3,
   "smm_target": 5,
   "agents": [
@@ -32,9 +32,25 @@
       "evals_total": 10,
       "trigger_evals_total": 30,
       "note": "Self-evolution infrastructure removed (v2.2.0 was over-optimized). Core pipeline unchanged."
+    },
+    "2.3.0": {
+      "date": "2026-07-09",
+      "evals_total": 10,
+      "trigger_evals_total": 30,
+      "note": "Added meta-reflection (8-dimension) to Delivery Agent. Regression baseline pending eval run."
     }
   },
   "changelog": [
+    {
+      "version": "2.3.0",
+      "date": "2026-07-09",
+      "changes": [
+        "Added meta-reflection (8-dimension) to Delivery Agent as Phase 3 — problem-definition/assumptions/reasoning/evidence-grounding/alternative-explanations/boundary-conditions/goal-check/uncertainty",
+        "Meta-reflection output as 7th standard deliverable with structured format + 10 hard constraints",
+        "Added Rule 8 (元反思必带) to SKILL.md evidence-chain constraints",
+        "Updated Agent index, registry, README to reflect meta-reflection capability"
+      ]
+    },
     {
       "version": "2.2.0",
       "date": "2026-06-14",

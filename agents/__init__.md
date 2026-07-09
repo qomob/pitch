@@ -17,7 +17,7 @@
 | Strategy | agents/strategy-agent.md | references/strategy-frameworks.md | 201 + 313 | ~5,100 |
 | Decision | agents/decision-agent.md | references/decision-engine.md | 228 + 181 | ~4,100 |
 | Expression | agents/expression-agent.md | references/pitch-structure.md | 269 + 336 | ~6,000 |
-| Delivery | agents/delivery-agent.md | — | 102 | ~1,700 |
+| Delivery | agents/delivery-agent.md | — | 160 | ~2,700 |
 
 **按需加载（条件触发）：**
 - references/bilingual-templates.md — 仅当用户使用英文提问时加载（~3,500 tokens）
@@ -84,7 +84,7 @@ Expression → Delivery:
 | Strategy | 逻辑链自检发现重大跳跃(C级) | 标注跳跃点，提供补强建议，不强行推导 | ⚠️ 逻辑跳跃 |
 | Decision | 证据链严重不足(整体证据质量"低") | 胜率标注为参考值，明确告知用户 | ⚠️ 证据不足 |
 | Expression | 用户未提供足够品牌素材 | AIGC Demo用通用品牌风格替代 | ⚠️ 通用风格 |
-| Delivery | 上游Agent输出不完整 | 标注缺失项，交付可用部分 | ⚠️ 部分交付 |
+| Delivery | 上游Agent输出不完整 | 标注缺失项，交付可用部分；元反思仍须执行，缺失项在对应维度标注 | ⚠️ 部分交付 |
 
 **用户触发重执行：**
 在任何Checkpoint处，用户可以说"重做这个Agent"或"跳过这个Agent"。
